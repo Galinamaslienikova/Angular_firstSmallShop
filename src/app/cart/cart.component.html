@@ -1,0 +1,17 @@
+<p *ngIf="loading">Loading ...</p>
+<div class='container text-center' *ngFor="let product of cart; let i = index;" >
+    
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">Total: {{product.amount*product.price}} $</p>
+          <p class="card-text">Amount: {{product.amount}}</p>
+          <button (click)="add($event)" id={{product.id}} value='+' class="card-link">+</button>
+          <button (click)="remove($event)" id={{product.id}}  value='-' class="card-link">-</button>
+        </div>
+      </div>
+
+</div> 
+<div class='container'>Total in cart {{this.total}}</div>
+<div  class='container'><a routerLink='/products'  ><button>Back to products</button></a><a routerLink='/check'  ><button>Make an order </button></a></div>

@@ -1,0 +1,29 @@
+
+.productPrice{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    p{
+        margin-right: 20px;
+    }
+}
+
+.productCont{
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px rgb(106, 109, 109);
+}
+.smallCart{
+    p{
+        position: absolute;
+        color:black;
+        left:380px;
+        border-radius:50%;
+        width: 25px;
+        background-color: rgb(165, 126, 202);
+        opacity: 0.5;
+        font-weight: 600;
+        text-align: center;
+
+    }
+}

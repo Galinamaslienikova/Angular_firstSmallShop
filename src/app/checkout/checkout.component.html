@@ -1,0 +1,21 @@
+<div class='container'>
+<form (change)='formChange()' class='forms'  (submit)='formSubmit($event)'>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input (input)='validName($event)' id='name'  type="text" />
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input id='phone' (input)='validPhone($event)'  name='phone'  placeholder="0XX-XXX-XX-XX" type="text" [(ngModel)]="phone" />
+    </div>
+    <div class="mb-3 form-check">
+    <label class="form-check-label" for="mail">Email</label>
+    <input id='mail' (input)='validMail($event)'   placeholder="xxxxxx@xxx.xx" name='mail'  type="text" [(ngModel)]="mail" />
+     
+    </div>
+    <a  *ngIf='linkA' routerLink='/thanks' (click)='clearLocal()' ><button type="submit" class="btn btn-primary">Submit</button></a>
+    <button *ngIf='!linkA' type="submit" class="btn btn-primary">Submit</button>
+    <p *ngIf='textDiv'>Please,enter all information</p>
+  </form>
+</div>
+
